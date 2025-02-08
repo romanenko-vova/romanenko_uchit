@@ -13,7 +13,7 @@ function Trajectory_card({ title, description, side }: Props) {
 
       <div className={`ml-20 md:ml-0 md:w-full md:flex ${side}`}>
         <div className="w-full md:w-full md:pr-12 md:pl-12">
-          <div className="p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl glass-effect hover:scale-105 transition-transform">
+          <div className="p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl glass-effect glass-effect-hover hover:scale-105 transition-transform">
             <h3 className="text-xl font-bold mb-2">{title}</h3>
             <p className="text-sm md:text-base">{description}</p>
           </div>
