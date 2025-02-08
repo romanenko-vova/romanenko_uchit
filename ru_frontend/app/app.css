@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+/* Добавьте это в ваш CSS файл */
+.swiper {
+  padding: 20px 0 40px 0;
+}
+
+.swiper-slide {
+  transition: transform 0.3s;
+}
+
+.swiper-slide:hover {
+  transform: translateY(-10px);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.glass-effect:hover {
+  transform: scale(1.05);
+}
+
+/* Анимация появления элементов при скролле */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.relative.flex.items-center {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
